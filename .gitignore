@@ -1,4 +1,6 @@
 embeddeds/haskell/dist
+embeddeds/javascript/node_modules
+embeddeds/javascript/package-lock.json
 
 # Python
 *.py[cod]
