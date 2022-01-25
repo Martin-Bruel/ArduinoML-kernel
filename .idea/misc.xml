@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/externals/xtext/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/embeddeds/java/pom.xml" />
+        <option value="$PROJECT_DIR$/embeddeds/scala/pom.xml" />
+        <option value="$PROJECT_DIR$/externals/antlr/pom.xml" />
+        <option value="$PROJECT_DIR$/externals/xtext/fr.polytech.si5.dsl.arduino.ide/pom.xml" />
+        <option value="$PROJECT_DIR$/externals/xtext/fr.polytech.si5.dsl.arduino.target/pom.xml" />
+        <option value="$PROJECT_DIR$/externals/xtext/fr.polytech.si5.dsl.arduino.ui/pom.xml" />
+        <option value="$PROJECT_DIR$/externals/xtext/fr.polytech.si5.dsl.arduino.web/pom.xml" />
+        <option value="$PROJECT_DIR$/externals/xtext/fr.polytech.si5.dsl.arduino/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>
