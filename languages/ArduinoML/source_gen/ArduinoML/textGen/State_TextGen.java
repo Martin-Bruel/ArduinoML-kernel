@@ -25,11 +25,11 @@ public class State_TextGen extends TextGenDescriptorBase {
     ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actions$huvN)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         tgs.indent();
-        tgs.append("tdigitalWrite(");
+        tgs.append("digitalWrite(");
         tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.actuator$hw_Y), PROPS.name$MnvL));
         tgs.append(", ");
         tgs.append(String.valueOf(SPropertyOperations.getEnum(it, PROPS.signal$hw7W)));
-        tgs.append(");");
+        tgs.append(");\n");
         tgs.append("boolean guard = millis() - time > debounce;");
       }
     });

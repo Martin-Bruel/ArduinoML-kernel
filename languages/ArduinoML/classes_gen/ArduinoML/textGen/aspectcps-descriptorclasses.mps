@@ -2734,7 +2734,7 @@
                         <ref role="37wK5l" to="kpbf:~TextGenSupport.append(java.lang.CharSequence)" resolve="append" />
                         <uo k="s:originTrace" v="n:6477107916799433345" />
                         <node concept="Xl_RD" id="bo" role="37wK5m">
-                          <property role="Xl_RC" value="tdigitalWrite(" />
+                          <property role="Xl_RC" value="digitalWrite(" />
                           <uo k="s:originTrace" v="n:6477107916799433345" />
                         </node>
                       </node>
@@ -2832,7 +2832,7 @@
                         <ref role="37wK5l" to="kpbf:~TextGenSupport.append(java.lang.CharSequence)" resolve="append" />
                         <uo k="s:originTrace" v="n:6477107916799458528" />
                         <node concept="Xl_RD" id="bJ" role="37wK5m">
-                          <property role="Xl_RC" value=");" />
+                          <property role="Xl_RC" value=");\n" />
                           <uo k="s:originTrace" v="n:6477107916799458528" />
                         </node>
                       </node>

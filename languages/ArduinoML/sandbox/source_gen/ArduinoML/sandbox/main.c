@@ -11,9 +11,11 @@ void state_off();
 int theLed = 13;
  
 // Declaring statesvoid state_on(){
-tdigitalWrite(theLed, high);boolean guard = millis() - time > debounce; "
+digitalWrite(theLed, high);
+boolean guard = millis() - time > debounce; "
 "void state_off(){
-tdigitalWrite(theLed, low);boolean guard = millis() - time > debounce;
+digitalWrite(theLed, low);
+boolean guard = millis() - time > debounce;
  
 void setup()
 {
