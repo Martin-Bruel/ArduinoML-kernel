@@ -55,14 +55,14 @@ public class GroovuinoMLModel {
 		transition.setNext(to);
 		transition.setSensor(sensor);
 		transition.setValue(value);
-		from.setTransition(transition);
+		from.addTransition(transition);
 	}
 
 	public void createTransition(State from, State to, int delay) {
 		TimeTransition transition = new TimeTransition();
 		transition.setNext(to);
 		transition.setDelay(delay);
-		from.setTransition(transition);
+		from.addTransition(transition);
 	}
 	
 	public void setInitialState(State state) {
