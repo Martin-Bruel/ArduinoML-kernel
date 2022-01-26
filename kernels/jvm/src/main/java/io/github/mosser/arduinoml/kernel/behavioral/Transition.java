@@ -6,8 +6,7 @@ import io.github.mosser.arduinoml.kernel.structural.*;
 
 public abstract class Transition implements Visitable {
 
-	private State next;
-
+	protected State next;
 
 	public State getNext() {
 		return next;
@@ -18,7 +17,5 @@ public abstract class Transition implements Visitable {
 	}
 
 	@Override
-	public void accept(Visitor visitor) {
-		visitor.visit(this);
-	}
+	public abstract void accept(Visitor visitor);
 }
