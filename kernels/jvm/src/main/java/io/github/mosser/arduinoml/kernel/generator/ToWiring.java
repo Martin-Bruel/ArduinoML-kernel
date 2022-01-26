@@ -132,8 +132,7 @@ public class ToWiring extends Visitor<StringBuffer> {
 		if(context.get("pass") == PASS.TWO) {
 			int delayInMS = transition.getDelay();
 			w(String.format("\t\t\tdelay(%d);\n", delayInMS));
-			w("\t\t\t\tcurrentState = " + transition.getNext().getName() + ";\n");
-			w("\t\t\t}\n");
+			w("\t\t\tcurrentState = " + transition.getNext().getName() + ";\n");
 			return;
 		}
 	}
