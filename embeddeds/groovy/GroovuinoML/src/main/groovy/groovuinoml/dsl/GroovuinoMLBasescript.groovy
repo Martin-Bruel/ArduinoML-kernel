@@ -54,6 +54,9 @@ abstract class GroovuinoMLBasescript extends Script {
 						sensor instanceof String ? (Sensor)((GroovuinoMLBinding)this.getBinding()).getVariable(sensor) : (Sensor)sensor, 
 						signal instanceof String ? (SIGNAL)((GroovuinoMLBinding)this.getBinding()).getVariable(signal) : (SIGNAL)signal)
 				}]
+			}],
+			[after: { time -> 
+				(())
 			}]
 		}]
 	}
