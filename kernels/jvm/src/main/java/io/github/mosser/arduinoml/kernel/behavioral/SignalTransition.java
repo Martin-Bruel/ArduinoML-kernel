@@ -31,3 +31,4 @@ public class SignalTransition extends Transition {
         visitor.visit(this);
     }
 }
+
