@@ -471,7 +471,7 @@
                             <ref role="3cqZAo" node="5BzjPl8GBMd" resolve="it" />
                           </node>
                           <node concept="3TrEf2" id="5BzjPl8GRwv" role="2OqNvi">
-                            <ref role="3Tt5mk" to="qujo:5To50LciVPM" resolve="target" />
+                            <ref role="3Tt5mk" to="qujo:5To50LciVPM" resolve="actuator" />
                           </node>
                         </node>
                         <node concept="3TrcHB" id="5BzjPl8GS9K" role="2OqNvi">
@@ -658,6 +658,49 @@
           </node>
           <node concept="la8eA" id="MnMnuRK1WH" role="lcghm">
             <property role="lacIc" value="();" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="5owyO$_oXd8">
+    <ref role="WuzLi" to="qujo:5To50LciVPJ" resolve="Action" />
+    <node concept="11bSqf" id="5owyO$_oXd9" role="11c4hB">
+      <node concept="3clFbS" id="5owyO$_oXda" role="2VODD2">
+        <node concept="lc7rE" id="5owyO$_oXdb" role="3cqZAp">
+          <node concept="la8eA" id="5owyO$_oYoi" role="lcghm">
+            <property role="lacIc" value="digitalWrite(" />
+          </node>
+          <node concept="l9hG8" id="5owyO$_oYpN" role="lcghm">
+            <node concept="2OqwBi" id="5owyO$_oZ8Z" role="lb14g">
+              <node concept="2OqwBi" id="5owyO$_oYxu" role="2Oq$k0">
+                <node concept="117lpO" id="5owyO$_oYqE" role="2Oq$k0" />
+                <node concept="3TrEf2" id="5owyO$_oYVp" role="2OqNvi">
+                  <ref role="3Tt5mk" to="qujo:5To50LciVPM" resolve="actuator" />
+                </node>
+              </node>
+              <node concept="3TrcHB" id="5owyO$_oZxR" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="5owyO$_oZPf" role="lcghm">
+            <property role="lacIc" value=", " />
+          </node>
+          <node concept="l9hG8" id="5owyO$_oZT1" role="lcghm">
+            <node concept="2YIFZM" id="5owyO$_p0$c" role="lb14g">
+              <ref role="37wK5l" to="wyt6:~String.valueOf(java.lang.Object)" resolve="valueOf" />
+              <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+              <node concept="2OqwBi" id="5owyO$_p0Kj" role="37wK5m">
+                <node concept="117lpO" id="5owyO$_p0As" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5owyO$_p12R" role="2OqNvi">
+                  <ref role="3TsBF5" to="qujo:5To50LciVPK" resolve="signal" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="5owyO$_p1c0" role="lcghm">
+            <property role="lacIc" value=");" />
           </node>
         </node>
       </node>
