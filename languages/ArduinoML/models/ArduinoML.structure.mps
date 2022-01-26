@@ -193,6 +193,11 @@
       <property role="TrG5h" value="value" />
       <ref role="AX2Wp" node="5To50LciVQl" resolve="SIGNAL" />
     </node>
+    <node concept="1TJgyj" id="1tgxz7afPPk" role="1TKVEi">
+      <property role="IQ2ns" value="1679990209413864788" />
+      <property role="20kJfa" value="sensor" />
+      <ref role="20lvS9" node="5To50LciVRH" resolve="Sensor" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5To50LciVRT">
     <property role="EcuMT" value="6798205680567959033" />
