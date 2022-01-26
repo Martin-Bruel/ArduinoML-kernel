@@ -8,6 +8,7 @@
   <imports>
     <import index="qujo" ref="r:41a5da09-ff86-4277-8309-33e2aaa422b8(ArduinoML.structure)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -114,6 +115,44 @@
         <node concept="3clFbF" id="5BzjPl8GaXO" role="3cqZAp">
           <node concept="Xl_RD" id="5BzjPl8GaXN" role="3clFbG">
             <property role="Xl_RC" value="c" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="1tgxz7afqpT">
+    <ref role="WuzLi" to="qujo:5To50LciVQq" resolve="Brick" />
+    <node concept="11bSqf" id="1tgxz7afybr" role="11c4hB">
+      <node concept="3clFbS" id="1tgxz7afybs" role="2VODD2">
+        <node concept="lc7rE" id="1tgxz7afybK" role="3cqZAp">
+          <node concept="la8eA" id="1tgxz7af_sT" role="lcghm">
+            <property role="lacIc" value="int " />
+          </node>
+          <node concept="l9hG8" id="1tgxz7af_xj" role="lcghm">
+            <node concept="2OqwBi" id="1tgxz7afCeq" role="lb14g">
+              <node concept="117lpO" id="1tgxz7afC7T" role="2Oq$k0" />
+              <node concept="3TrcHB" id="1tgxz7afChI" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="1tgxz7afCou" role="lcghm">
+            <property role="lacIc" value=" = " />
+          </node>
+          <node concept="l9hG8" id="1tgxz7afFHN" role="lcghm">
+            <node concept="2YIFZM" id="1tgxz7afGoN" role="lb14g">
+              <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+              <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
+              <node concept="2OqwBi" id="1tgxz7afGKC" role="37wK5m">
+                <node concept="117lpO" id="1tgxz7afGyv" role="2Oq$k0" />
+                <node concept="3TrcHB" id="1tgxz7afHbY" role="2OqNvi">
+                  <ref role="3TsBF5" to="qujo:5To50LciVRh" resolve="pin" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="1tgxz7afIjt" role="lcghm">
+            <property role="lacIc" value=";" />
           </node>
         </node>
       </node>
