@@ -64,14 +64,14 @@
     <node concept="1TJgyj" id="5To50LciVPy" role="1TKVEi">
       <property role="IQ2ns" value="6798205680567958882" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="state" />
+      <property role="20kJfa" value="states" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="5To50LciVPB" resolve="State" />
     </node>
     <node concept="1TJgyj" id="5To50LciVP$" role="1TKVEi">
       <property role="IQ2ns" value="6798205680567958884" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="brick" />
+      <property role="20kJfa" value="bricks" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="5To50LciVQq" resolve="Brick" />
     </node>
@@ -86,7 +86,7 @@
     <node concept="1TJgyj" id="5To50LciVPE" role="1TKVEi">
       <property role="IQ2ns" value="6798205680567958890" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="action" />
+      <property role="20kJfa" value="actions" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="5To50LciVPJ" resolve="Action" />
     </node>
@@ -94,8 +94,18 @@
       <property role="IQ2ns" value="6798205680567958892" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="transition" />
-      <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="5To50LciVPP" resolve="Transition" />
+    </node>
+    <node concept="1TJgyj" id="5BzjPl8EPtF" role="1TKVEi">
+      <property role="IQ2ns" value="6477107916798908267" />
+      <property role="20kJfa" value="next" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5To50LciVPB" resolve="State" />
+    </node>
+    <node concept="1TJgyi" id="5BzjPl8F1s8" role="1TKVEl">
+      <property role="IQ2nx" value="6477107916798957320" />
+      <property role="TrG5h" value="isInitial" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
   </node>
   <node concept="1TIwiD" id="5To50LciVPJ">
@@ -121,6 +131,12 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="5To50LciVPQ" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="5BzjPl8EO7N" role="1TKVEi">
+      <property role="IQ2ns" value="6477107916798902771" />
+      <property role="20kJfa" value="target" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5To50LciVPB" resolve="State" />
     </node>
   </node>
   <node concept="1TIwiD" id="5To50LciVPS">

@@ -103,8 +103,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:41a5da09-ff86-4277-8309-33e2aaa422b8(ArduinoML.structure)/6798205680567958879");
     b.version(2);
-    b.aggregate("state", 0x5e58140c4c4bbd62L).target(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd67L).optional(false).ordered(true).multiple(true).origin("6798205680567958882").done();
-    b.aggregate("brick", 0x5e58140c4c4bbd64L).target(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd9aL).optional(false).ordered(true).multiple(true).origin("6798205680567958884").done();
+    b.aggregate("states", 0x5e58140c4c4bbd62L).target(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd67L).optional(false).ordered(true).multiple(true).origin("6798205680567958882").done();
+    b.aggregate("bricks", 0x5e58140c4c4bbd64L).target(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd9aL).optional(false).ordered(true).multiple(true).origin("6798205680567958884").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForBrick() {
@@ -140,8 +140,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:41a5da09-ff86-4277-8309-33e2aaa422b8(ArduinoML.structure)/6798205680567958887");
     b.version(2);
-    b.aggregate("action", 0x5e58140c4c4bbd6aL).target(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd6fL).optional(false).ordered(true).multiple(true).origin("6798205680567958890").done();
-    b.aggregate("transition", 0x5e58140c4c4bbd6cL).target(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd75L).optional(false).ordered(true).multiple(false).origin("6798205680567958892").done();
+    b.property("isInitial", 0x59e34f5548ac1708L).type(PrimitiveTypeId.BOOLEAN).origin("6477107916798957320").done();
+    b.associate("next", 0x59e34f5548ab576bL).target(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd67L).optional(false).origin("6477107916798908267").done();
+    b.aggregate("actions", 0x5e58140c4c4bbd6aL).target(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd6fL).optional(false).ordered(true).multiple(true).origin("6798205680567958890").done();
+    b.aggregate("transition", 0x5e58140c4c4bbd6cL).target(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd75L).optional(true).ordered(true).multiple(false).origin("6798205680567958892").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTimeTransition() {
@@ -159,6 +161,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:41a5da09-ff86-4277-8309-33e2aaa422b8(ArduinoML.structure)/6798205680567958901");
     b.version(2);
+    b.associate("target", 0x59e34f5548ab41f3L).target(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd67L).optional(false).origin("6477107916798902771").done();
     return b.create();
   }
 }

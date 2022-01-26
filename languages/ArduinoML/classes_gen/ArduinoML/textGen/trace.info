@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082113931046:jetbrains.mps.baseLanguage.structure.ContinueStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <root>
+    <file name="TextGenAspectDescriptor.java">
+      <unit at="52,0,55,0" name="ArduinoML.textGen.TextGenAspectDescriptor$CONCEPTS" />
+      <unit at="16,0,56,0" name="ArduinoML.textGen.TextGenAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:0d534b88-8c04-42a9-9cee-52177e861e76(ArduinoML.textGen)/3845439136956327834">
+    <file name="Actuator_TextGen.java">
+      <node id="3845439136956327834" at="14,54,15,55" concept="4" />
+      <node id="3845439136956501873" at="15,55,16,27" concept="1" />
+      <node id="3845439136956501933" at="16,27,17,102" concept="1" />
+      <node id="3845439136956507068" at="17,102,18,29" concept="1" />
+      <node id="3845439136956327834" at="22,0,23,0" concept="6" trace="pin$l6LK" />
+      <node id="3845439136956327834" at="13,0,20,0" concept="3" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="3845439136956327834" at="14,54,18,29">
+        <var name="tgs" id="3845439136956327834" />
+      </scope>
+      <scope id="3845439136956327834" at="13,0,20,0">
+        <var name="ctx" id="3845439136956327834" />
+      </scope>
+      <unit id="3845439136956327834" at="21,0,24,0" name="ArduinoML.textGen.Actuator_TextGen$PROPS" />
+      <unit id="3845439136956327834" at="12,0,25,0" name="ArduinoML.textGen.Actuator_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="3845439136956327834" at="26,42,27,38" concept="5" />
+      <scope id="3845439136956327834" at="26,42,27,38" />
+    </file>
+  </root>
+  <root nodeRef="r:0d534b88-8c04-42a9-9cee-52177e861e76(ArduinoML.textGen)/6477107916799251668">
+    <file name="App_TextGen.java">
+      <node id="6477107916799251668" at="11,54,12,55" concept="4" />
+      <node id="6477107916799251672" at="12,55,13,38" concept="1" />
+      <node id="6477107916799251668" at="10,0,15,0" concept="3" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="6477107916799251668" at="11,54,13,38">
+        <var name="tgs" id="6477107916799251668" />
+      </scope>
+      <scope id="6477107916799251668" at="10,0,15,0">
+        <var name="ctx" id="6477107916799251668" />
+      </scope>
+      <unit id="6477107916799251668" at="9,0,16,0" name="ArduinoML.textGen.App_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="6477107916799251668" at="28,37,29,33" concept="5" />
+      <node id="6477107916799251668" at="37,54,38,45" concept="4" />
+      <node id="6477107916799251668" at="38,45,39,48" concept="4" />
+      <node id="6477107916799251668" at="39,48,40,84" concept="1" />
+      <node id="6477107916799251668" at="40,84,41,17" concept="0" />
+      <node id="6477107916799258271" at="45,53,46,18" concept="5" />
+      <node id="6477107916799258484" at="48,58,49,15" concept="5" />
+      <node id="6477107916799251668" at="45,0,48,0" concept="7" trace="getFileName_App#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="6477107916799251668" at="48,0,51,0" concept="7" trace="getFileExtension_App#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="6477107916799251668" at="36,58,42,7" concept="2" />
+      <scope id="6477107916799251668" at="28,37,29,33" />
+      <scope id="6477107916799251668" at="45,53,46,18" />
+      <scope id="6477107916799251668" at="48,58,49,15" />
+      <scope id="6477107916799251668" at="45,0,48,0">
+        <var name="node" id="6477107916799251668" />
+      </scope>
+      <scope id="6477107916799251668" at="48,0,51,0">
+        <var name="node" id="6477107916799251668" />
+      </scope>
+      <scope id="6477107916799251668" at="37,54,41,17">
+        <var name="ext" id="6477107916799251668" />
+        <var name="fname" id="6477107916799251668" />
+      </scope>
+    </file>
+  </root>
+</debug-info>
+
