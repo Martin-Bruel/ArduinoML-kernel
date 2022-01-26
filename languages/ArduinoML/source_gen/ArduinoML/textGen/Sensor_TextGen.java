@@ -17,6 +17,7 @@ public class Sensor_TextGen extends TextGenDescriptorBase {
     tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.pin$l6LK)));
     tgs.append(" = ");
     tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.pin$l6LK)));
+    tgs.append(";");
 
   }
 

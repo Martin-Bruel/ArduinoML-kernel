@@ -23,6 +23,8 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
   @Override
   public TextGenDescriptor getDescriptor(@NotNull SAbstractConcept concept) {
     switch (myIndex.index(concept)) {
+      case LanguageConceptSwitch.Action:
+        return new Action_TextGen();
       case LanguageConceptSwitch.Actuator:
         return new Actuator_TextGen();
       case LanguageConceptSwitch.App:
@@ -31,8 +33,12 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new Brick_TextGen();
       case LanguageConceptSwitch.Sensor:
         return new Sensor_TextGen();
+      case LanguageConceptSwitch.SignalTransition:
+        return new SignalTransition_TextGen();
       case LanguageConceptSwitch.State:
         return new State_TextGen();
+      case LanguageConceptSwitch.TimeTransition:
+        return new TimeTransition_TextGen();
     }
     return null;
   }

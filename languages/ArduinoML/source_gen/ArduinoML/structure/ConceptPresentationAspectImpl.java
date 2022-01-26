@@ -27,7 +27,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Action:
         if (props_Action == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd6fL, 0x5e58140c4c4bbd72L, "target", "", "");
+          cpb.presentationByReference(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd6fL, 0x5e58140c4c4bbd72L, "actuator", "", "");
           props_Action = cpb.create();
         }
         return props_Action;

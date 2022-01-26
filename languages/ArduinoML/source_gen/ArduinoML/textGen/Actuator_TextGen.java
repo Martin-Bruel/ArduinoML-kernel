@@ -17,6 +17,7 @@ public class Actuator_TextGen extends TextGenDescriptorBase {
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$MnvL));
     tgs.append(" = ");
     tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.pin$l6LK)));
+    tgs.append(";");
   }
 
   private static final class PROPS {
