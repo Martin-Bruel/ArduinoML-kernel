@@ -38,42 +38,43 @@ public class App_TextGen extends TextGenDescriptorBase {
     });
     tgs.append("\n");
     tgs.append("// Declaring available bricks\n");
-    {
-      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.bricks$hnWl);
-      final SNode lastItem = Sequence.fromIterable(collection).last();
-      for (SNode item : collection) {
-        tgs.appendNode(item);
-        if (item != lastItem) {
-          tgs.append("\"\n\"");
-        }
+    ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.bricks$hnWl)).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        tgs.append("int ");
+        tgs.append(SPropertyOperations.getString(it, PROPS.name$MnvL));
+        tgs.append(" = ");
+        tgs.append(String.valueOf(SPropertyOperations.getInteger(it, PROPS.pin$l6LK)));
+        tgs.append(";");
       }
-    }
+    });
     tgs.append("\n \n");
-    tgs.append("// Declaring states");
+    tgs.append("// Declaring states\n");
     {
       Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$hnuj);
       final SNode lastItem = Sequence.fromIterable(collection).last();
       for (SNode item : collection) {
         tgs.appendNode(item);
         if (item != lastItem) {
-          tgs.append(" \"\n\"");
+          tgs.append(" \n");
         }
       }
     }
     tgs.append("\n \n");
     tgs.append("void setup()\n{\n");
     ctx.getBuffer().area().increaseIndent();
-    ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.bricks$hnWl)).visitAll(new IVisitor<SNode>() {
-      public void visit(SNode it) {
-        tgs.indent();
-        tgs.append("pinMode(");
-        tgs.append(SPropertyOperations.getString(it, PROPS.name$MnvL));
-        tgs.append(", ");
-        tgs.append("OUTPUT;\n");
+    tgs.indent();
+    {
+      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.bricks$hnWl);
+      final SNode lastItem = Sequence.fromIterable(collection).last();
+      for (SNode item : collection) {
+        tgs.appendNode(item);
+        if (item != lastItem) {
+          tgs.append("\n");
+        }
       }
-    });
+    }
     ctx.getBuffer().area().decreaseIndent();
-    tgs.append("}\n \n");
+    tgs.append("\n}\n\n");
     tgs.append("int main(void)\n{\n");
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
@@ -94,6 +95,7 @@ public class App_TextGen extends TextGenDescriptorBase {
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty pin$l6LK = MetaAdapterFactory.getProperty(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd9aL, 0x5e58140c4c4bbdd1L, "pin");
     /*package*/ static final SProperty isInitial$C71D = MetaAdapterFactory.getProperty(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd67L, 0x59e34f5548ac1708L, "isInitial");
   }
 

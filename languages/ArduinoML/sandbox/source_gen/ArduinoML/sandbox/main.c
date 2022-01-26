@@ -8,20 +8,31 @@ void state_on();
 void state_off();
 
 // Declaring available bricks
-int theLed = 13;
+int theLed = 13;int theButton = 12;
  
-// Declaring statesvoid state_on(){
-digitalWrite(theLed, high);
-boolean guard = millis() - time > debounce; "
-"void state_off(){
-digitalWrite(theLed, low);
-boolean guard = millis() - time > debounce;
+// Declaring states
+void state_on(){
+  digitalWrite(theLed, high);
+if (digitalRead(pinMode(theButton, INPUT); ) == high && guard) {
+		time = millis();
+		state_on();
+	} else {
+		state_latransition();
+	}
+}
+
+} 
+void state_off(){
+  digitalWrite(theLed, low);
+???
+}
  
 void setup()
 {
-  pinMode(theLed, OUTPUT;
+  pinMode(theLed, OUTPUT);
+pinMode(theButton, INPUT); 
 }
- 
+
 int main(void)
 {
   setup();
