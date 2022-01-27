@@ -983,7 +983,7 @@
             <uo k="s:originTrace" v="n:6798205680567958933" />
           </node>
           <node concept="Xl_RD" id="4S" role="37wK5m">
-            <property role="Xl_RC" value="high" />
+            <property role="Xl_RC" value="HIGH" />
             <uo k="s:originTrace" v="n:6798205680567958933" />
           </node>
           <node concept="1adDum" id="4T" role="37wK5m">
@@ -1018,7 +1018,7 @@
             <uo k="s:originTrace" v="n:6798205680567958933" />
           </node>
           <node concept="Xl_RD" id="50" role="37wK5m">
-            <property role="Xl_RC" value="low" />
+            <property role="Xl_RC" value="LOW" />
             <uo k="s:originTrace" v="n:6798205680567958933" />
           </node>
           <node concept="1adDum" id="51" role="37wK5m">
@@ -3598,7 +3598,9 @@
                 </node>
                 <node concept="liA8E" id="jj" role="2OqNvi">
                   <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2$AggregationLinkBuilder.multiple(boolean)" resolve="multiple" />
-                  <node concept="3clFbT" id="jz" role="37wK5m" />
+                  <node concept="3clFbT" id="jz" role="37wK5m">
+                    <property role="3clFbU" value="true" />
+                  </node>
                 </node>
               </node>
               <node concept="liA8E" id="jh" role="2OqNvi">

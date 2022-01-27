@@ -94,7 +94,7 @@
       <property role="IQ2ns" value="6798205680567958892" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="transition" />
-      <property role="20lbJX" value="fLJekj4/_1" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="5To50LciVPP" resolve="Transition" />
     </node>
     <node concept="1TJgyj" id="5BzjPl8EPtF" role="1TKVEi">
@@ -155,12 +155,12 @@
     <node concept="25R33" id="5To50LciVQm" role="25R1y">
       <property role="3tVfz5" value="6798205680567958934" />
       <property role="TrG5h" value="HIGH" />
-      <property role="1L1pqM" value="high" />
+      <property role="1L1pqM" value="HIGH" />
     </node>
     <node concept="25R33" id="5To50LciVQn" role="25R1y">
       <property role="3tVfz5" value="6798205680567958935" />
       <property role="TrG5h" value="LOW" />
-      <property role="1L1pqM" value="low" />
+      <property role="1L1pqM" value="LOW" />
     </node>
   </node>
   <node concept="1TIwiD" id="5To50LciVQq">
