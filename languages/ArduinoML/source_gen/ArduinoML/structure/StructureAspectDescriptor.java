@@ -144,7 +144,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("isInitial", 0x59e34f5548ac1708L).type(PrimitiveTypeId.BOOLEAN).origin("6477107916798957320").done();
     b.associate("next", 0x59e34f5548ab576bL).target(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd67L).optional(false).origin("6477107916798908267").done();
     b.aggregate("actions", 0x5e58140c4c4bbd6aL).target(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd6fL).optional(false).ordered(true).multiple(true).origin("6798205680567958890").done();
-    b.aggregate("transition", 0x5e58140c4c4bbd6cL).target(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd75L).optional(true).ordered(true).multiple(false).origin("6798205680567958892").done();
+    b.aggregate("transition", 0x5e58140c4c4bbd6cL).target(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd75L).optional(false).ordered(true).multiple(false).origin("6798205680567958892").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTimeTransition() {

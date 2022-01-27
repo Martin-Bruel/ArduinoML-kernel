@@ -15,11 +15,13 @@ public class TimeTransition_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
+    tgs.indent();
     tgs.append("delay(");
     tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.duration$$rEs)));
-    tgs.append(");");
+    tgs.append(");\n");
+    tgs.indent();
     tgs.append("state_");
-    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.target$P0D6), LINKS.next$Mvk5), PROPS.name$MnvL));
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.target$P0D6), PROPS.name$MnvL));
     tgs.append("();");
   }
 
@@ -30,6 +32,5 @@ public class TimeTransition_TextGen extends TextGenDescriptorBase {
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink target$P0D6 = MetaAdapterFactory.getReferenceLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd75L, 0x59e34f5548ab41f3L, "target");
-    /*package*/ static final SReferenceLink next$Mvk5 = MetaAdapterFactory.getReferenceLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd67L, 0x59e34f5548ab576bL, "next");
   }
 }

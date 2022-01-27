@@ -27,6 +27,8 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.append("/** Generating code for application ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$MnvL));
     tgs.append("**/\n");
+    tgs.append("long debounce = 200;\n");
+    tgs.append("boolean B1BounceGuard = false;\nlong B1LastDebounceTime = 0;\n");
     tgs.append("\n");
     tgs.append("// Declaring states function headers \n");
     ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$hnuj)).visitAll(new IVisitor<SNode>() {
@@ -44,10 +46,10 @@ public class App_TextGen extends TextGenDescriptorBase {
         tgs.append(SPropertyOperations.getString(it, PROPS.name$MnvL));
         tgs.append(" = ");
         tgs.append(String.valueOf(SPropertyOperations.getInteger(it, PROPS.pin$l6LK)));
-        tgs.append(";");
+        tgs.append(";\n");
       }
     });
-    tgs.append("\n \n");
+    tgs.append("\n");
     tgs.append("// Declaring states\n");
     {
       Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$hnuj);
@@ -61,19 +63,16 @@ public class App_TextGen extends TextGenDescriptorBase {
     }
     tgs.append("\n \n");
     tgs.append("void setup()\n{\n");
-    ctx.getBuffer().area().increaseIndent();
-    tgs.indent();
     {
       Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.bricks$hnWl);
       final SNode lastItem = Sequence.fromIterable(collection).last();
       for (SNode item : collection) {
         tgs.appendNode(item);
         if (item != lastItem) {
-          tgs.append("\n");
+          tgs.append(" \n");
         }
       }
     }
-    ctx.getBuffer().area().decreaseIndent();
     tgs.append("\n}\n\n");
     tgs.append("int main(void)\n{\n");
     ctx.getBuffer().area().increaseIndent();

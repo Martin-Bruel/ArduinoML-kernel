@@ -29,6 +29,9 @@
         <property id="6798205680567958993" name="pin" index="i4UBt" />
       </concept>
       <concept id="6798205680567959021" name="ArduinoML.structure.Sensor" flags="ng" index="i4UBx" />
+      <concept id="6798205680567959033" name="ArduinoML.structure.TimeTransition" flags="ng" index="i4UBP">
+        <property id="6798205680567959034" name="duration" index="i4UBQ" />
+      </concept>
       <concept id="6798205680567959030" name="ArduinoML.structure.SignalTransition" flags="ng" index="i4UBU">
         <reference id="1679990209413864788" name="sensor" index="3trXH_" />
       </concept>
@@ -60,6 +63,11 @@
       <node concept="i4U_z" id="5BzjPl8F2mN" role="i4U_A">
         <property role="i4U_W" value="5To50LciVQn/LOW" />
         <ref role="i4U_Y" node="5BzjPl8F2mJ" resolve="theLed" />
+      </node>
+      <node concept="i4UBP" id="5owyO$_yqbq" role="i4U_w">
+        <property role="TrG5h" value="mytimeTransition" />
+        <property role="i4UBQ" value="28" />
+        <ref role="hi0UA" node="5BzjPl8F2mG" resolve="on" />
       </node>
     </node>
     <node concept="i4U_O" id="5BzjPl8F2mJ" role="i4U_C">

@@ -21,19 +21,22 @@ public class State_TextGen extends TextGenDescriptorBase {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     tgs.append("void state_");
     tgs.append(String.valueOf(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$MnvL)));
-    tgs.append("(){\n");
+    tgs.append("()\n");
+    tgs.indent();
+    tgs.append("{\n");
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
     ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actions$huvN)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
-
         tgs.append("digitalWrite(");
         tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.actuator$hw_Y), PROPS.name$MnvL));
         tgs.append(", ");
         tgs.append(String.valueOf(SPropertyOperations.getEnum(it, PROPS.signal$hw7W)));
         tgs.append(");\n");
+        tgs.indent();
       }
     });
+    tgs.append("B1BounceGuard = millis() - B1LastDebounceTime > debounce;\n");
     tgs.appendNode(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.transition$huXP));
     tgs.append("\n");
     ctx.getBuffer().area().decreaseIndent();
