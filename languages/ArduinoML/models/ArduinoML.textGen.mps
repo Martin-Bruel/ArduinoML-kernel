@@ -7,8 +7,8 @@
   </languages>
   <imports>
     <import index="qujo" ref="r:41a5da09-ff86-4277-8309-33e2aaa422b8(ArduinoML.structure)" />
-    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -173,11 +173,15 @@
           <node concept="la8eA" id="5owyO$_xonN" role="lcghm">
             <property role="lacIc" value="pinMode(" />
           </node>
-          <node concept="l9hG8" id="5owyO$_xop6" role="lcghm">
-            <node concept="2OqwBi" id="5owyO$_xoxV" role="lb14g">
-              <node concept="117lpO" id="5owyO$_xopX" role="2Oq$k0" />
-              <node concept="3TrcHB" id="5owyO$_xoIb" role="2OqNvi">
-                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+          <node concept="l9hG8" id="2N7wf_YvXIV" role="lcghm">
+            <node concept="2YIFZM" id="2N7wf_YvXKG" role="lb14g">
+              <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+              <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
+              <node concept="2OqwBi" id="2N7wf_YvY9M" role="37wK5m">
+                <node concept="117lpO" id="2N7wf_YvXTV" role="2Oq$k0" />
+                <node concept="3TrcHB" id="2N7wf_YvYkS" role="2OqNvi">
+                  <ref role="3TsBF5" to="qujo:5To50LciVRh" resolve="pin" />
+                </node>
               </node>
             </node>
           </node>
@@ -428,72 +432,6 @@
             <property role="lacIc" value="\n" />
           </node>
         </node>
-        <node concept="3clFbH" id="2N7wf_YuBO8" role="3cqZAp" />
-        <node concept="lc7rE" id="5I4dByLrocv" role="3cqZAp">
-          <node concept="la8eA" id="5I4dByLrojM" role="lcghm">
-            <property role="lacIc" value="// Declaring variables \n" />
-          </node>
-        </node>
-        <node concept="3clFbF" id="5I4dByLroV5" role="3cqZAp">
-          <node concept="2OqwBi" id="5I4dByLrqOM" role="3clFbG">
-            <node concept="2OqwBi" id="5I4dByLrp8v" role="2Oq$k0">
-              <node concept="117lpO" id="5I4dByLroV4" role="2Oq$k0" />
-              <node concept="3Tsc0h" id="5I4dByLrpqe" role="2OqNvi">
-                <ref role="3TtcxE" to="qujo:5To50LciVP$" resolve="bricks" />
-              </node>
-            </node>
-            <node concept="2es0OD" id="5I4dByLrtYM" role="2OqNvi">
-              <node concept="1bVj0M" id="5I4dByLrtYO" role="23t8la">
-                <node concept="3clFbS" id="5I4dByLrtYP" role="1bW5cS">
-                  <node concept="lc7rE" id="5I4dByLruFR" role="3cqZAp">
-                    <node concept="la8eA" id="5I4dByLryJt" role="lcghm">
-                      <property role="lacIc" value="int " />
-                    </node>
-                    <node concept="l9hG8" id="5I4dByLruKk" role="lcghm">
-                      <node concept="2OqwBi" id="5I4dByLrw7v" role="lb14g">
-                        <node concept="37vLTw" id="5I4dByLruNd" role="2Oq$k0">
-                          <ref role="3cqZAo" node="5I4dByLrtYQ" resolve="it" />
-                        </node>
-                        <node concept="3TrcHB" id="5I4dByLrwm6" role="2OqNvi">
-                          <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                        </node>
-                      </node>
-                    </node>
-                    <node concept="la8eA" id="5I4dByLrwx9" role="lcghm">
-                      <property role="lacIc" value=" = " />
-                    </node>
-                    <node concept="l9hG8" id="5I4dByLrwG5" role="lcghm">
-                      <node concept="2YIFZM" id="5I4dByLrDfa" role="lb14g">
-                        <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
-                        <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
-                        <node concept="2OqwBi" id="5I4dByLrD__" role="37wK5m">
-                          <node concept="37vLTw" id="5I4dByLrDjP" role="2Oq$k0">
-                            <ref role="3cqZAo" node="5I4dByLrtYQ" resolve="it" />
-                          </node>
-                          <node concept="3TrcHB" id="5I4dByLrDZa" role="2OqNvi">
-                            <ref role="3TsBF5" to="qujo:5To50LciVRh" resolve="pin" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                    <node concept="la8eA" id="2gAkSHMR$gh" role="lcghm">
-                      <property role="lacIc" value=";\n" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="Rh6nW" id="5I4dByLrtYQ" role="1bW2Oz">
-                  <property role="TrG5h" value="it" />
-                  <node concept="2jxLKc" id="5I4dByLrtYR" role="1tU5fm" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="lc7rE" id="2gAkSHMXc8y" role="3cqZAp">
-          <node concept="la8eA" id="2gAkSHMXcef" role="lcghm">
-            <property role="lacIc" value="\n" />
-          </node>
-        </node>
         <node concept="3clFbH" id="2N7wf_YuCYM" role="3cqZAp" />
         <node concept="lc7rE" id="1cDzLAOIOO8" role="3cqZAp">
           <node concept="la8eA" id="1cDzLAOIOSb" role="lcghm">
@@ -631,23 +569,27 @@
                         <node concept="la8eA" id="3hAagqZ9zhX" role="lcghm">
                           <property role="lacIc" value="digitalWrite(" />
                         </node>
-                        <node concept="l9hG8" id="3hAagqZ9zuV" role="lcghm">
-                          <node concept="2OqwBi" id="2gAkSHMTzji" role="lb14g">
-                            <node concept="2OqwBi" id="2gAkSHMTyMv" role="2Oq$k0">
-                              <node concept="2OqwBi" id="2gAkSHMTyli" role="2Oq$k0">
-                                <node concept="37vLTw" id="2gAkSHMTy4h" role="2Oq$k0">
-                                  <ref role="3cqZAo" node="3hAagqZ9yWX" resolve="it" />
+                        <node concept="l9hG8" id="2N7wf_YvZP4" role="lcghm">
+                          <node concept="2YIFZM" id="2N7wf_YvZYf" role="lb14g">
+                            <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                            <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
+                            <node concept="2OqwBi" id="2N7wf_Yw1W8" role="37wK5m">
+                              <node concept="2OqwBi" id="2N7wf_Yw0Yr" role="2Oq$k0">
+                                <node concept="2OqwBi" id="2N7wf_Yw0ka" role="2Oq$k0">
+                                  <node concept="37vLTw" id="2N7wf_Yw02E" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="3hAagqZ9yWX" resolve="it" />
+                                  </node>
+                                  <node concept="3TrEf2" id="2N7wf_Yw0FT" role="2OqNvi">
+                                    <ref role="3Tt5mk" to="qujo:5I4dByLmS5B" resolve="actuator" />
+                                  </node>
                                 </node>
-                                <node concept="3TrEf2" id="2gAkSHMTyyc" role="2OqNvi">
-                                  <ref role="3Tt5mk" to="qujo:5I4dByLmS5B" resolve="actuator" />
+                                <node concept="3TrEf2" id="2N7wf_Yw1Fz" role="2OqNvi">
+                                  <ref role="3Tt5mk" to="qujo:5I4dByLmS3K" resolve="target" />
                                 </node>
                               </node>
-                              <node concept="3TrEf2" id="2gAkSHMTz1e" role="2OqNvi">
-                                <ref role="3Tt5mk" to="qujo:5I4dByLmS3K" resolve="target" />
+                              <node concept="3TrcHB" id="2N7wf_Yw2dn" role="2OqNvi">
+                                <ref role="3TsBF5" to="qujo:5To50LciVRh" resolve="pin" />
                               </node>
-                            </node>
-                            <node concept="3TrcHB" id="2gAkSHMV9oT" role="2OqNvi">
-                              <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                             </node>
                           </node>
                         </node>
@@ -714,10 +656,14 @@
             <property role="lacIc" value="pinMode(" />
           </node>
           <node concept="l9hG8" id="5owyO$_xnJN" role="lcghm">
-            <node concept="2OqwBi" id="5owyO$_xnSC" role="lb14g">
-              <node concept="117lpO" id="5owyO$_xnKE" role="2Oq$k0" />
-              <node concept="3TrcHB" id="5owyO$_xo4S" role="2OqNvi">
-                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+            <node concept="2YIFZM" id="2N7wf_YvW6u" role="lb14g">
+              <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+              <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
+              <node concept="2OqwBi" id="2N7wf_YvWv$" role="37wK5m">
+                <node concept="117lpO" id="2N7wf_YvWfH" role="2Oq$k0" />
+                <node concept="3TrcHB" id="2N7wf_YvWEE" role="2OqNvi">
+                  <ref role="3TsBF5" to="qujo:5To50LciVRh" resolve="pin" />
+                </node>
               </node>
             </node>
           </node>
