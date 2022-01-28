@@ -26,7 +26,6 @@
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
-      <concept id="1068431790191" name="jetbrains.mps.baseLanguage.structure.Expression" flags="nn" index="33vP2n" />
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
@@ -194,9 +193,6 @@
         <node concept="lc7rE" id="2gAkSHMYkCI" role="3cqZAp">
           <node concept="la8eA" id="2gAkSHMYkIt" role="lcghm">
             <property role="lacIc" value="enum STATE {" />
-          </node>
-          <node concept="l9hG8" id="2gAkSHMYkKo" role="lcghm">
-            <node concept="33vP2n" id="2gAkSHMYkKq" role="lb14g" />
           </node>
           <node concept="la8eA" id="2gAkSHMYkJx" role="lcghm">
             <property role="lacIc" value="};" />
