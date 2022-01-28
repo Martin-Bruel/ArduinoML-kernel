@@ -26,6 +26,7 @@
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
+      <concept id="1068431790191" name="jetbrains.mps.baseLanguage.structure.Expression" flags="nn" index="33vP2n" />
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
@@ -190,6 +191,17 @@
             <property role="lacIc" value="// Declaring states \n" />
           </node>
         </node>
+        <node concept="lc7rE" id="2gAkSHMYkCI" role="3cqZAp">
+          <node concept="la8eA" id="2gAkSHMYkIt" role="lcghm">
+            <property role="lacIc" value="enum STATE {" />
+          </node>
+          <node concept="l9hG8" id="2gAkSHMYkKo" role="lcghm">
+            <node concept="33vP2n" id="2gAkSHMYkKq" role="lb14g" />
+          </node>
+          <node concept="la8eA" id="2gAkSHMYkJx" role="lcghm">
+            <property role="lacIc" value="};" />
+          </node>
+        </node>
         <node concept="lc7rE" id="2gAkSHMT1yP" role="3cqZAp">
           <node concept="la8eA" id="2gAkSHMT1Fq" role="lcghm">
             <property role="lacIc" value="// TODO \n" />
@@ -299,7 +311,7 @@
         </node>
         <node concept="lc7rE" id="1cDzLAOJ2K6" role="3cqZAp">
           <node concept="la8eA" id="1cDzLAOJ2Rd" role="lcghm">
-            <property role="lacIc" value="int loop(void)\n{\n" />
+            <property role="lacIc" value="void loop(void)\n{\n" />
           </node>
         </node>
         <node concept="3izx1p" id="1cDzLAOJ36n" role="3cqZAp">
