@@ -11,7 +11,6 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.internal.collections.runtime.Sequence;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -21,8 +20,8 @@ public class App_TextGen extends TextGenDescriptorBase {
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     tgs.append("#include <avr/io.h>\n");
-    tgs.append("#include  <util/delay.h\n");
-    tgs.append("#include <Arduino.h>");
+    tgs.append("#include <util/delay.h>\n");
+    tgs.append("#include <Arduino.h>\n");
     tgs.append("\n");
     tgs.append("/** Generating code for application ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$MnvL));
@@ -30,16 +29,10 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.append("long debounce = 200;\n");
     tgs.append("boolean B1BounceGuard = false;\nlong B1LastDebounceTime = 0;\n");
     tgs.append("\n");
-    tgs.append("// Declaring states function headers \n");
-    ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$hnuj)).visitAll(new IVisitor<SNode>() {
-      public void visit(SNode it) {
-        tgs.append("void state_");
-        tgs.append(SPropertyOperations.getString(it, PROPS.name$MnvL));
-        tgs.append("();\n");
-      }
-    });
+    tgs.append("// Declaring states \n");
+    tgs.append("// TODO \n");
     tgs.append("\n");
-    tgs.append("// Declaring available bricks\n");
+    tgs.append("// Declaring variables \n");
     ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.bricks$hnWl)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         tgs.append("int ");
@@ -50,19 +43,9 @@ public class App_TextGen extends TextGenDescriptorBase {
       }
     });
     tgs.append("\n");
-    tgs.append("// Declaring states\n");
-    {
-      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$hnuj);
-      final SNode lastItem = Sequence.fromIterable(collection).last();
-      for (SNode item : collection) {
-        tgs.appendNode(item);
-        if (item != lastItem) {
-          tgs.append(" \n");
-        }
-      }
-    }
-    tgs.append("\n \n");
+    tgs.append("// Setup \n");
     tgs.append("void setup()\n{\n");
+    ctx.getBuffer().area().increaseIndent();
     {
       Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.bricks$hnWl);
       final SNode lastItem = Sequence.fromIterable(collection).last();
@@ -73,21 +56,20 @@ public class App_TextGen extends TextGenDescriptorBase {
         }
       }
     }
+    tgs.indent();
     tgs.append("\n}\n\n");
-    tgs.append("int main(void)\n{\n");
+    ctx.getBuffer().area().decreaseIndent();
+    tgs.append("int loop(void)\n{\n");
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
-    tgs.append("setup();\n");
+    tgs.append("switch(currentState) {\n");
+    ctx.getBuffer().area().increaseIndent();
+    for (SNode item : SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$MURk)) {
+      tgs.appendNode(item);
+    }
+    ctx.getBuffer().area().decreaseIndent();
     tgs.indent();
-    tgs.append("state_");
-    tgs.append(SPropertyOperations.getString(ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$hnuj)).findFirst(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        return SPropertyOperations.getBoolean(it, PROPS.isInitial$C71D);
-      }
-    }), PROPS.name$MnvL));
-    tgs.append("();\n");
-    tgs.indent();
-    tgs.append("return 0;\n");
+    tgs.append("}\n");
     ctx.getBuffer().area().decreaseIndent();
     tgs.append("}");
   }
@@ -95,11 +77,10 @@ public class App_TextGen extends TextGenDescriptorBase {
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
     /*package*/ static final SProperty pin$l6LK = MetaAdapterFactory.getProperty(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd9aL, 0x5e58140c4c4bbdd1L, "pin");
-    /*package*/ static final SProperty isInitial$C71D = MetaAdapterFactory.getProperty(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd67L, 0x59e34f5548ac1708L, "isInitial");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink states$hnuj = MetaAdapterFactory.getContainmentLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd5fL, 0x5e58140c4c4bbd62L, "states");
     /*package*/ static final SContainmentLink bricks$hnWl = MetaAdapterFactory.getContainmentLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd5fL, 0x5e58140c4c4bbd64L, "bricks");
+    /*package*/ static final SContainmentLink states$MURk = MetaAdapterFactory.getContainmentLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd5fL, 0x2426538b72d24b53L, "states");
   }
 }

@@ -7,7 +7,7 @@ import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SProperty;
 
@@ -15,25 +15,24 @@ public class SignalTransition_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.indent();
     tgs.append("if (digitalRead(");
-    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.sensor$Qa2L), PROPS.name$MnvL));
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.sensor$v5k4), PROPS.name$MnvL));
     tgs.append(") == ");
     tgs.append(String.valueOf(SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.value$$qVW)));
-    tgs.append(" && B1BounceGuard)\n");
-    tgs.indent();
-    tgs.append("{");
-    tgs.append("\n\tB1LastDebounceTime = millis();\n\tstate_");
-    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.target$P0D6), LINKS.next$Mvk5), PROPS.name$MnvL));
-    tgs.append("();\n");
-    tgs.indent();
-    tgs.append("}");
+    tgs.append(" && B1BounceGuard) {\n");
+    ctx.getBuffer().area().increaseIndent();
+    tgs.append("\n\tB1LastDebounceTime = millis()");
+    tgs.append(";\n");
+    tgs.append("currentState = ");
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.next$2g0U), PROPS.name$MnvL));
+    tgs.append(";\n");
+    ctx.getBuffer().area().decreaseIndent();
+    tgs.append("}\n");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink sensor$Qa2L = MetaAdapterFactory.getReferenceLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbdf6L, 0x17508631ca3f5d54L, "sensor");
-    /*package*/ static final SReferenceLink target$P0D6 = MetaAdapterFactory.getReferenceLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd75L, 0x59e34f5548ab41f3L, "target");
-    /*package*/ static final SReferenceLink next$Mvk5 = MetaAdapterFactory.getReferenceLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd67L, 0x59e34f5548ab576bL, "next");
+    /*package*/ static final SContainmentLink sensor$v5k4 = MetaAdapterFactory.getContainmentLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbdf6L, 0x5b843678b158f951L, "sensor");
+    /*package*/ static final SContainmentLink next$2g0U = MetaAdapterFactory.getContainmentLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5b843678b17ad845L, 0x5b843678b17ad84fL, "next");
   }
 
   private static final class PROPS {

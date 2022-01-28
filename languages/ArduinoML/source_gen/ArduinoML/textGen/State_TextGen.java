@@ -19,28 +19,28 @@ public class State_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("void state_");
+    tgs.indent();
+    tgs.append("case ");
     tgs.append(String.valueOf(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$MnvL)));
-    tgs.append("()\n");
-    tgs.indent();
-    tgs.append("{\n");
+    tgs.append(":\n");
     ctx.getBuffer().area().increaseIndent();
-    tgs.indent();
     ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actions$huvN)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
+        tgs.indent();
         tgs.append("digitalWrite(");
-        tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.actuator$hw_Y), PROPS.name$MnvL));
+        tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.actuator$TZyp), LINKS.target$ZG7u), PROPS.name$MnvL));
         tgs.append(", ");
         tgs.append(String.valueOf(SPropertyOperations.getEnum(it, PROPS.signal$hw7W)));
         tgs.append(");\n");
         tgs.indent();
+        tgs.append("B1BounceGuard = millis() - B1LastDebounceTime > debounce;\n");
+        tgs.indent();
+        tgs.append("//TODO\n");
+        tgs.indent();
+        tgs.append("break;\n");
       }
     });
-    tgs.append("B1BounceGuard = millis() - B1LastDebounceTime > debounce;\n");
-    tgs.appendNode(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.transition$huXP));
-    tgs.append("\n");
     ctx.getBuffer().area().decreaseIndent();
-    tgs.append("}");
   }
 
   private static final class PROPS {
@@ -50,7 +50,7 @@ public class State_TextGen extends TextGenDescriptorBase {
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink actions$huvN = MetaAdapterFactory.getContainmentLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd67L, 0x5e58140c4c4bbd6aL, "actions");
-    /*package*/ static final SReferenceLink actuator$hw_Y = MetaAdapterFactory.getReferenceLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd6fL, 0x5e58140c4c4bbd72L, "actuator");
-    /*package*/ static final SContainmentLink transition$huXP = MetaAdapterFactory.getContainmentLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd67L, 0x5e58140c4c4bbd6cL, "transition");
+    /*package*/ static final SContainmentLink actuator$TZyp = MetaAdapterFactory.getContainmentLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd6fL, 0x5b843678b15b8167L, "actuator");
+    /*package*/ static final SReferenceLink target$ZG7u = MetaAdapterFactory.getReferenceLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5b843678b15b80edL, 0x5b843678b15b80f0L, "target");
   }
 }

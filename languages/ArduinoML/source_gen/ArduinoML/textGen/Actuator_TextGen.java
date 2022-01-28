@@ -13,13 +13,11 @@ public class Actuator_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    ctx.getBuffer().area().increaseIndent();
     tgs.indent();
     tgs.append("pinMode(");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$MnvL));
     tgs.append(", ");
     tgs.append("OUTPUT);");
-    ctx.getBuffer().area().decreaseIndent();
   }
 
   private static final class PROPS {

@@ -9,20 +9,18 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class TimeTransition_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.indent();
     tgs.append("delay(");
     tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.duration$$rEs)));
     tgs.append(");\n");
-    tgs.indent();
-    tgs.append("state_");
-    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.target$P0D6), PROPS.name$MnvL));
-    tgs.append("();");
+    tgs.append("currentState = ");
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.next$2g0U), PROPS.name$MnvL));
+    tgs.append(";\n");
   }
 
   private static final class PROPS {
@@ -31,6 +29,6 @@ public class TimeTransition_TextGen extends TextGenDescriptorBase {
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink target$P0D6 = MetaAdapterFactory.getReferenceLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5e58140c4c4bbd75L, 0x59e34f5548ab41f3L, "target");
+    /*package*/ static final SContainmentLink next$2g0U = MetaAdapterFactory.getContainmentLink(0xebc7d5848dc64f91L, 0xa9e8fcd9cb7722d1L, 0x5b843678b17ad845L, 0x5b843678b17ad84fL, "next");
   }
 }
