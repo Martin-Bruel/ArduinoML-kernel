@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="di3qqobfzvv4k5mc1xb6ew95yld42xj">
+  <files names="Action_Editor.java:Action_EditorBuilder_a.java:Actuator_Editor.java:Actuator_EditorBuilder_a.java:App_Editor.java:App_EditorBuilder_a.java:BrickDef.java:BrickDef_ComponentBuilder_a.java:EditorAspectDescriptorImpl.java:Sensor_Editor.java:Sensor_EditorBuilder_a.java:SignalTransition_Editor.java:SignalTransition_EditorBuilder_a.java:State_Editor.java:State_EditorBuilder_a.java:TimeTransition_Editor.java:TimeTransition_EditorBuilder_a.java:TransitionDef.java:TransitionDef_ComponentBuilder_a.java" />
+</product>
+
