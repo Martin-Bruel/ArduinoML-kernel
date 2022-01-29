@@ -540,6 +540,12 @@
                 </node>
               </node>
             </node>
+            <node concept="1bpajm" id="2N7wf_YF1S_" role="3cqZAp" />
+            <node concept="lc7rE" id="5owyO$_wmnY" role="3cqZAp">
+              <node concept="la8eA" id="5owyO$_wmsA" role="lcghm">
+                <property role="lacIc" value="B1BounceGuard = millis() - B1LastDebounceTime &gt; debounce;\n" />
+              </node>
+            </node>
             <node concept="lc7rE" id="2N7wf_YzHVK" role="3cqZAp">
               <node concept="l9S2W" id="2N7wf_YzI0C" role="lcghm">
                 <node concept="2OqwBi" id="2N7wf_YzI78" role="lbANJ">
@@ -550,6 +556,12 @@
                 </node>
               </node>
             </node>
+          </node>
+        </node>
+        <node concept="1bpajm" id="2N7wf_YFbp6" role="3cqZAp" />
+        <node concept="lc7rE" id="2N7wf_YFvRp" role="3cqZAp">
+          <node concept="la8eA" id="2N7wf_YFvRV" role="lcghm">
+            <property role="lacIc" value="break;\n" />
           </node>
         </node>
       </node>
@@ -676,12 +688,6 @@
           </node>
           <node concept="la8eA" id="3hAagqZ9Az8" role="lcghm">
             <property role="lacIc" value=");\n" />
-          </node>
-        </node>
-        <node concept="1bpajm" id="2N7wf_YDmWm" role="3cqZAp" />
-        <node concept="lc7rE" id="5owyO$_wmnY" role="3cqZAp">
-          <node concept="la8eA" id="5owyO$_wmsA" role="lcghm">
-            <property role="lacIc" value="B1BounceGuard = millis() - B1LastDebounceTime &gt; debounce;\n" />
           </node>
         </node>
       </node>
