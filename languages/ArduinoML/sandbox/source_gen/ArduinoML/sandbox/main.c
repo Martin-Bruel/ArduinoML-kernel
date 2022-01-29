@@ -1,5 +1,5 @@
 #include <avr/io.h>
-#include <util/delay.h
+#include <util/delay.h>
 #include <Arduino.h>
 
 /** Generating code for application program**/
@@ -8,29 +8,28 @@ boolean B1BounceGuard = false;
 long B1LastDebounceTime = 0;
 
 // Declaring states 
-// TODO};
-STATE currentState = on
-// Declaring variables 
-int B1 = 11;
-int LED1 = 12;
+enum STATE {on,off};
+STATE currentState = on;
+
 // Setup 
 void setup()
 {
-    pinMode(B1, INPUT);  
-    pinMode(LED1, OUTPUT);
+  pinMode(11, INPUT);  
+  pinMode(12, OUTPUT);  
 }
 
-int loop(void)
+void loop(void)
 {
-switch(currentState) {
-;
-case on:
-digitalWrite(12, HIGH);
-B1BounceGuard = millis() - B1LastDebounceTime > debounce;
-//TODObreak;
-case off:
-digitalWrite(12, LOW);
-B1BounceGuard = millis() - B1LastDebounceTime > debounce;
-//TODObreak;
-}
+  switch(currentState) {
+    case on:
+      digitalWrite(12, HIGH);
+      B1BounceGuard = millis() - B1LastDebounceTime > debounce;
+      //TODO
+      break;
+    case off:
+      digitalWrite(12, LOW);
+      B1BounceGuard = millis() - B1LastDebounceTime > debounce;
+      //TODO
+      break;
+  }
 }
