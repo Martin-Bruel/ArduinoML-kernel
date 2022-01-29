@@ -31,6 +31,7 @@
       </concept>
       <concept id="6798205680567959021" name="ArduinoML.structure.Sensor" flags="ng" index="i4UBx" />
       <concept id="6798205680567959030" name="ArduinoML.structure.SignalTransition" flags="ng" index="i4UBU">
+        <property id="6798205680567959031" name="value" index="i4UBV" />
         <reference id="3226689467093773999" name="sensor" index="1imuTm" />
         <child id="6594455646376622417" name="sensor" index="3ERcWD" />
       </concept>
@@ -56,15 +57,15 @@
     </language>
   </registry>
   <node concept="i4U_j" id="2gAkSHMPBpn">
-    <property role="TrG5h" value="program" />
+    <property role="TrG5h" value="Scenario3" />
     <ref role="1imuTr" node="2gAkSHMPYhN" resolve="off" />
     <node concept="i4UBx" id="2gAkSHMPBpG" role="i4U_C">
       <property role="TrG5h" value="B1" />
-      <property role="i4UBt" value="12" />
+      <property role="i4UBt" value="9" />
     </node>
     <node concept="i4U_O" id="2gAkSHMPBpM" role="i4U_C">
       <property role="TrG5h" value="LED1" />
-      <property role="i4UBt" value="19" />
+      <property role="i4UBt" value="12" />
     </node>
     <node concept="i4U_F" id="2gAkSHMPBpp" role="1mX1zo">
       <property role="TrG5h" value="on" />
@@ -138,6 +139,184 @@
     </node>
     <node concept="3ERcXG" id="2N7wf_Y$smV" role="1iiqUQ">
       <ref role="3ERcXH" node="2gAkSHMPBpp" resolve="on" />
+    </node>
+  </node>
+  <node concept="i4U_j" id="2N7wf_YEL_j">
+    <property role="TrG5h" value="Scenario1" />
+    <ref role="1imuTr" node="2N7wf_YEL_E" resolve="off" />
+    <node concept="i4UBx" id="2N7wf_YEL_n" role="i4U_C">
+      <property role="TrG5h" value="B1" />
+      <property role="i4UBt" value="9" />
+    </node>
+    <node concept="i4U_O" id="2N7wf_YEL_t" role="i4U_C">
+      <property role="TrG5h" value="LED1" />
+      <property role="i4UBt" value="12" />
+    </node>
+    <node concept="i4U_O" id="2N7wf_YEL__" role="i4U_C">
+      <property role="TrG5h" value="BUZZ" />
+      <property role="i4UBt" value="11" />
+    </node>
+    <node concept="i4U_F" id="2N7wf_YEL_l" role="1mX1zo">
+      <property role="TrG5h" value="on" />
+      <node concept="i4U_z" id="2N7wf_YEL_J" role="i4U_A">
+        <ref role="1imuTj" node="2N7wf_YEL_t" resolve="LED1" />
+      </node>
+      <node concept="i4U_z" id="2N7wf_YEL_L" role="i4U_A">
+        <ref role="1imuTj" node="2N7wf_YEL__" resolve="BUZZ" />
+      </node>
+      <node concept="i4UBU" id="2N7wf_YEL_O" role="1iiqP0">
+        <property role="i4UBV" value="5To50LciVQn/LOW" />
+        <ref role="1imuTa" node="2N7wf_YEL_E" resolve="off" />
+        <ref role="1imuTm" node="2N7wf_YEL_n" resolve="B1" />
+      </node>
+    </node>
+    <node concept="i4U_F" id="2N7wf_YEL_E" role="1mX1zo">
+      <property role="TrG5h" value="off" />
+      <node concept="i4U_z" id="2N7wf_YEL_Q" role="i4U_A">
+        <property role="i4U_W" value="5To50LciVQn/LOW" />
+        <ref role="1imuTj" node="2N7wf_YEL_t" resolve="LED1" />
+      </node>
+      <node concept="i4UBU" id="2N7wf_YEL_S" role="1iiqP0">
+        <ref role="1imuTa" node="2N7wf_YEL_l" resolve="on" />
+        <ref role="1imuTm" node="2N7wf_YEL_n" resolve="B1" />
+      </node>
+    </node>
+  </node>
+  <node concept="i4U_j" id="2N7wf_YEL_U">
+    <property role="TrG5h" value="Scenario2" />
+    <ref role="1imuTr" node="2N7wf_YEL_W" resolve="s00" />
+    <node concept="i4UBx" id="2N7wf_YELAm" role="i4U_C">
+      <property role="TrG5h" value="B1" />
+      <property role="i4UBt" value="9" />
+    </node>
+    <node concept="i4UBx" id="2N7wf_YELAs" role="i4U_C">
+      <property role="TrG5h" value="B2" />
+      <property role="i4UBt" value="10" />
+    </node>
+    <node concept="i4U_O" id="2N7wf_YELA$" role="i4U_C">
+      <property role="TrG5h" value="BUZ1" />
+      <property role="i4UBt" value="11" />
+    </node>
+    <node concept="i4U_F" id="2N7wf_YEL_W" role="1mX1zo">
+      <property role="TrG5h" value="s00" />
+      <node concept="i4U_z" id="2N7wf_YELAD" role="i4U_A">
+        <property role="i4U_W" value="5To50LciVQn/LOW" />
+        <ref role="1imuTj" node="2N7wf_YELA$" resolve="BUZ1" />
+      </node>
+      <node concept="i4UBU" id="2N7wf_YELAF" role="1iiqP0">
+        <ref role="1imuTa" node="2N7wf_YELA4" resolve="s10" />
+        <ref role="1imuTm" node="2N7wf_YELAm" resolve="B1" />
+      </node>
+      <node concept="i4UBU" id="2N7wf_YELBi" role="1iiqP0">
+        <ref role="1imuTm" node="2N7wf_YELAs" resolve="B2" />
+        <ref role="1imuTa" node="2N7wf_YEL_Y" resolve="s01" />
+      </node>
+    </node>
+    <node concept="i4U_F" id="2N7wf_YEL_Y" role="1mX1zo">
+      <property role="TrG5h" value="s01" />
+      <node concept="i4UBU" id="2N7wf_YELAN" role="1iiqP0">
+        <ref role="1imuTm" node="2N7wf_YELAm" resolve="B1" />
+        <ref role="1imuTa" node="2N7wf_YELAc" resolve="s11" />
+      </node>
+      <node concept="i4UBU" id="2N7wf_YELBb" role="1iiqP0">
+        <property role="i4UBV" value="5To50LciVQn/LOW" />
+        <ref role="1imuTm" node="2N7wf_YELAs" resolve="B2" />
+        <ref role="1imuTa" node="2N7wf_YEL_W" resolve="s00" />
+      </node>
+      <node concept="i4U_z" id="2N7wf_YELAH" role="i4U_A">
+        <property role="i4U_W" value="5To50LciVQn/LOW" />
+        <ref role="1imuTj" node="2N7wf_YELA$" resolve="BUZ1" />
+      </node>
+    </node>
+    <node concept="i4U_F" id="2N7wf_YELA4" role="1mX1zo">
+      <property role="TrG5h" value="s10" />
+      <node concept="i4U_z" id="2N7wf_YELAJ" role="i4U_A">
+        <property role="i4U_W" value="5To50LciVQn/LOW" />
+        <ref role="1imuTj" node="2N7wf_YELA$" resolve="BUZ1" />
+      </node>
+      <node concept="i4UBU" id="2N7wf_YELAQ" role="1iiqP0">
+        <property role="i4UBV" value="5To50LciVQn/LOW" />
+        <ref role="1imuTm" node="2N7wf_YELAm" resolve="B1" />
+        <ref role="1imuTa" node="2N7wf_YEL_W" resolve="s00" />
+      </node>
+      <node concept="i4UBU" id="2N7wf_YELB4" role="1iiqP0">
+        <ref role="1imuTm" node="2N7wf_YELAs" resolve="B2" />
+        <ref role="1imuTa" node="2N7wf_YELAc" resolve="s11" />
+      </node>
+    </node>
+    <node concept="i4U_F" id="2N7wf_YELAc" role="1mX1zo">
+      <property role="TrG5h" value="s11" />
+      <node concept="i4U_z" id="2N7wf_YELAL" role="i4U_A">
+        <ref role="1imuTj" node="2N7wf_YELA$" resolve="BUZ1" />
+      </node>
+      <node concept="i4UBU" id="2N7wf_YELAS" role="1iiqP0">
+        <property role="i4UBV" value="5To50LciVQn/LOW" />
+        <ref role="1imuTm" node="2N7wf_YELAm" resolve="B1" />
+        <ref role="1imuTa" node="2N7wf_YEL_Y" resolve="s01" />
+      </node>
+      <node concept="i4UBU" id="2N7wf_YELAX" role="1iiqP0">
+        <property role="i4UBV" value="5To50LciVQn/LOW" />
+        <ref role="1imuTm" node="2N7wf_YELAs" resolve="B2" />
+        <ref role="1imuTa" node="2N7wf_YELA4" resolve="s10" />
+      </node>
+    </node>
+  </node>
+  <node concept="i4U_j" id="2N7wf_YELBm">
+    <property role="TrG5h" value="Scenario4" />
+    <ref role="1imuTr" node="2N7wf_YELBo" resolve="idle" />
+    <node concept="i4UBx" id="2N7wf_YELBq" role="i4U_C">
+      <property role="TrG5h" value="B1" />
+      <property role="i4UBt" value="9" />
+    </node>
+    <node concept="i4U_O" id="2N7wf_YELBw" role="i4U_C">
+      <property role="TrG5h" value="LED1" />
+      <property role="i4UBt" value="12" />
+    </node>
+    <node concept="i4U_O" id="2N7wf_YELBC" role="i4U_C">
+      <property role="TrG5h" value="BUZ1" />
+      <property role="i4UBt" value="11" />
+    </node>
+    <node concept="i4U_F" id="2N7wf_YELBo" role="1mX1zo">
+      <property role="TrG5h" value="idle" />
+      <node concept="i4U_z" id="2N7wf_YELBH" role="i4U_A">
+        <property role="i4U_W" value="5To50LciVQn/LOW" />
+        <ref role="1imuTj" node="2N7wf_YELBw" resolve="LED1" />
+      </node>
+      <node concept="i4U_z" id="2N7wf_YELBJ" role="i4U_A">
+        <property role="i4U_W" value="5To50LciVQn/LOW" />
+        <ref role="1imuTj" node="2N7wf_YELBC" resolve="BUZ1" />
+      </node>
+      <node concept="i4UBU" id="2N7wf_YELBM" role="1iiqP0">
+        <ref role="1imuTa" node="2N7wf_YELBO" resolve="noise" />
+        <ref role="1imuTm" node="2N7wf_YELBq" resolve="B1" />
+      </node>
+    </node>
+    <node concept="i4U_F" id="2N7wf_YELBO" role="1mX1zo">
+      <property role="TrG5h" value="noise" />
+      <node concept="i4U_z" id="2N7wf_YELBY" role="i4U_A">
+        <property role="i4U_W" value="5To50LciVQn/LOW" />
+        <ref role="1imuTj" node="2N7wf_YELBw" resolve="LED1" />
+      </node>
+      <node concept="i4U_z" id="2N7wf_YELCd" role="i4U_A">
+        <ref role="1imuTj" node="2N7wf_YELBC" resolve="BUZ1" />
+      </node>
+      <node concept="i4UBU" id="2N7wf_YELCA" role="1iiqP0">
+        <ref role="1imuTm" node="2N7wf_YELBq" resolve="B1" />
+        <ref role="1imuTa" node="2N7wf_YELC2" resolve="light" />
+      </node>
+    </node>
+    <node concept="i4U_F" id="2N7wf_YELC2" role="1mX1zo">
+      <property role="TrG5h" value="light" />
+      <node concept="i4U_z" id="2N7wf_YELCC" role="i4U_A">
+        <ref role="1imuTj" node="2N7wf_YELBw" resolve="LED1" />
+      </node>
+      <node concept="i4U_z" id="2N7wf_YELCE" role="i4U_A">
+        <ref role="1imuTj" node="2N7wf_YELBC" resolve="BUZ1" />
+      </node>
+      <node concept="i4UBU" id="2N7wf_YELCH" role="1iiqP0">
+        <ref role="1imuTm" node="2N7wf_YELBq" resolve="B1" />
+        <ref role="1imuTa" node="2N7wf_YELBo" resolve="idle" />
+      </node>
     </node>
   </node>
 </model>
