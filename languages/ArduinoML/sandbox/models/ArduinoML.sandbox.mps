@@ -30,6 +30,9 @@
         <property id="6798205680567958993" name="pin" index="i4UBt" />
       </concept>
       <concept id="6798205680567959021" name="ArduinoML.structure.Sensor" flags="ng" index="i4UBx" />
+      <concept id="6798205680567959033" name="ArduinoML.structure.TimeTransition" flags="ng" index="i4UBP">
+        <property id="6798205680567959034" name="duration" index="i4UBQ" />
+      </concept>
       <concept id="6798205680567959030" name="ArduinoML.structure.SignalTransition" flags="ng" index="i4UBU">
         <property id="6798205680567959031" name="value" index="i4UBV" />
         <reference id="3226689467093773999" name="sensor" index="1imuTm" />
@@ -316,6 +319,39 @@
       <node concept="i4UBU" id="2N7wf_YELCH" role="1iiqP0">
         <ref role="1imuTm" node="2N7wf_YELBq" resolve="B1" />
         <ref role="1imuTa" node="2N7wf_YELBo" resolve="idle" />
+      </node>
+    </node>
+  </node>
+  <node concept="i4U_j" id="7fMxX1bEh$S">
+    <property role="TrG5h" value="TimeSwitch" />
+    <ref role="1imuTr" node="7fMxX1bEh_2" resolve="off" />
+    <node concept="i4UBx" id="7fMxX1bEh_9" role="i4U_C">
+      <property role="TrG5h" value="B1" />
+      <property role="i4UBt" value="9" />
+    </node>
+    <node concept="i4U_O" id="7fMxX1bEh_f" role="i4U_C">
+      <property role="TrG5h" value="LED1" />
+      <property role="i4UBt" value="12" />
+    </node>
+    <node concept="i4U_F" id="7fMxX1bEh$U" role="1mX1zo">
+      <property role="TrG5h" value="on" />
+      <node concept="i4U_z" id="7fMxX1bEh$Y" role="i4U_A">
+        <ref role="1imuTj" node="7fMxX1bEh_f" resolve="LED1" />
+      </node>
+      <node concept="i4UBP" id="7fMxX1bEh_l" role="1iiqP0">
+        <property role="i4UBQ" value="800" />
+        <ref role="1imuTa" node="7fMxX1bEh_2" resolve="off" />
+      </node>
+    </node>
+    <node concept="i4U_F" id="7fMxX1bEh_2" role="1mX1zo">
+      <property role="TrG5h" value="off" />
+      <node concept="i4UBU" id="7fMxX1bEh_s" role="1iiqP0">
+        <ref role="1imuTm" node="7fMxX1bEh_9" resolve="B1" />
+        <ref role="1imuTa" node="7fMxX1bEh$U" resolve="on" />
+      </node>
+      <node concept="i4U_z" id="7fMxX1bEh_j" role="i4U_A">
+        <property role="i4U_W" value="5To50LciVQn/LOW" />
+        <ref role="1imuTj" node="7fMxX1bEh_f" resolve="LED1" />
       </node>
     </node>
   </node>

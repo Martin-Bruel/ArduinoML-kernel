@@ -239,6 +239,9 @@
         <ref role="1NtTu8" to="qujo:5To50LciVRU" resolve="duration" />
       </node>
       <node concept="l2Vlx" id="5I4dByLuvTQ" role="2iSdaV" />
+      <node concept="3F0ifn" id="7fMxX1bEh__" role="3EZMnx">
+        <property role="3F0ifm" value="ms" />
+      </node>
       <node concept="PMmxH" id="2N7wf_Yz$7t" role="3EZMnx">
         <ref role="PMmxG" node="2gAkSHMLtPs" resolve="TransitionDef" />
       </node>
