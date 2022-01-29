@@ -5,25 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="675959b4-f384-4758-a164-9432cc8caa37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_all_2_3_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_11_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/externals/antlr/src/main/antlr4/io/github/mosser/arduinoml/externals/antlr/grammar/Arduinoml.g4" beforeDir="false" afterPath="$PROJECT_DIR$/externals/antlr/src/main/antlr4/io/github/mosser/arduinoml/externals/antlr/grammar/Arduinoml.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/externals/antlr/src/main/antlr4/io/github/mosser/arduinoml/externals/antlr/grammar/ArduinomlBaseListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/externals/antlr/src/main/antlr4/io/github/mosser/arduinoml/externals/antlr/grammar/ArduinomlLexer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/externals/antlr/src/main/antlr4/io/github/mosser/arduinoml/externals/antlr/grammar/ArduinomlListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/externals/antlr/src/main/antlr4/io/github/mosser/arduinoml/externals/antlr/grammar/ArduinomlParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/externals/antlr/src/main/java/io/github/mosser/arduinoml/externals/antlr/ModelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/externals/antlr/src/main/java/io/github/mosser/arduinoml/externals/antlr/ModelBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/externals/antlr/src/main/resources/red_button.arduinoml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/externals/antlr/src/main/resources/scenario_1.arduinoml" beforeDir="false" afterPath="$PROJECT_DIR$/externals/antlr/src/main/resources/scenario_1.arduinoml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/externals/antlr/src/main/resources/scenario_2.arduinoml" beforeDir="false" afterPath="$PROJECT_DIR$/externals/antlr/src/main/resources/scenario_2.arduinoml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
