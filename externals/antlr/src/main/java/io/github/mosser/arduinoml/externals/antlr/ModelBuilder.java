@@ -89,8 +89,8 @@ public class ModelBuilder extends ArduinomlBaseListener {
     @Override
     public void enterSensor(ArduinomlParser.SensorContext ctx) {
         Sensor sensor = new Sensor();
-        sensor.setName(ctx.location().id.getText());
-        sensor.setPin(Integer.parseInt(ctx.location().port.getText()));
+        sensor.setName(ctx.brick().id.getText());
+        sensor.setPin(Integer.parseInt(ctx.brick().port.getText()));
         this.theApp.getBricks().add(sensor);
         sensors.put(sensor.getName(), sensor);
     }
@@ -98,8 +98,8 @@ public class ModelBuilder extends ArduinomlBaseListener {
     @Override
     public void enterActuator(ArduinomlParser.ActuatorContext ctx) {
         Actuator actuator = new Actuator();
-        actuator.setName(ctx.location().id.getText());
-        actuator.setPin(Integer.parseInt(ctx.location().port.getText()));
+        actuator.setName(ctx.brick().id.getText());
+        actuator.setPin(Integer.parseInt(ctx.brick().port.getText()));
         this.theApp.getBricks().add(actuator);
         actuators.put(actuator.getName(), actuator);
     }
