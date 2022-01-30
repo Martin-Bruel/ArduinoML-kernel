@@ -54,7 +54,7 @@
       <property role="i4UBt" value="12" />
     </node>
     <node concept="i4U_O" id="2N7wf_YEL__" role="i4U_C">
-      <property role="TrG5h" value="BUZZ" />
+      <property role="TrG5h" value="BUZ1" />
       <property role="i4UBt" value="11" />
     </node>
     <node concept="i4U_F" id="2N7wf_YEL_l" role="1mX1zo">
@@ -76,6 +76,10 @@
       <node concept="i4U_z" id="2N7wf_YEL_Q" role="i4U_A">
         <property role="i4U_W" value="5To50LciVQn/LOW" />
         <ref role="1imuTj" node="2N7wf_YEL_t" resolve="LED1" />
+      </node>
+      <node concept="i4U_z" id="71IanF9ojYm" role="i4U_A">
+        <property role="i4U_W" value="5To50LciVQn/LOW" />
+        <ref role="1imuTj" node="2N7wf_YEL__" resolve="BUZZ" />
       </node>
       <node concept="i4UBU" id="2N7wf_YEL_S" role="1iiqP0">
         <ref role="1imuTa" node="2N7wf_YEL_l" resolve="on" />
@@ -212,6 +216,7 @@
         <ref role="1imuTj" node="2N7wf_YELBw" resolve="LED1" />
       </node>
       <node concept="i4U_z" id="2N7wf_YELCE" role="i4U_A">
+        <property role="i4U_W" value="5To50LciVQn/LOW" />
         <ref role="1imuTj" node="2N7wf_YELBC" resolve="BUZ1" />
       </node>
       <node concept="i4UBU" id="2N7wf_YELCH" role="1iiqP0">
