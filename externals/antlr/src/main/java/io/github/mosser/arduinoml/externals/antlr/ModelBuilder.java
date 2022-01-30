@@ -36,8 +36,8 @@ public class ModelBuilder extends ArduinomlBaseListener {
     private Map<String, Sensor>   sensors   = new HashMap<>();
     private Map<String, Actuator> actuators = new HashMap<>();
     private Map<String, State>    states  = new HashMap<>();
-    private Map<String, SignalBinding>  signal_transition_bindings  = new HashMap<>();
-    private Map<String, TimeBinding>  time_transition_bindings  = new HashMap<>();
+    private Map<SignalBinding, String>  signal_transition_bindings  = new HashMap<>();
+    private Map<TimeBinding, String>  time_transition_bindings  = new HashMap<>();
 
     private class SignalBinding { // used to support state resolution for transitions
         String to; // name of the next state, as its instance might not have been compiled yet
@@ -64,7 +64,7 @@ public class ModelBuilder extends ArduinomlBaseListener {
 
     @Override public void exitRoot(ArduinomlParser.RootContext ctx) {
         // Resolving states in transitions
-        signal_transition_bindings.forEach((key, binding) ->  {
+        signal_transition_bindings.forEach((binding, key) ->  {
             SignalTransition t = new SignalTransition();
             t.setSensor(binding.trigger);
             t.setValue(binding.value);
@@ -72,7 +72,7 @@ public class ModelBuilder extends ArduinomlBaseListener {
             states.get(key).addTransition(t);
         });
 
-        time_transition_bindings.forEach((key, binding) ->  {
+        time_transition_bindings.forEach((binding, key) ->  {
             TimeTransition t = new TimeTransition();
             t.setDelay(binding.time);
             t.setNext(states.get(binding.to));
@@ -133,7 +133,7 @@ public class ModelBuilder extends ArduinomlBaseListener {
         toBeResolvedLater.to      = ctx.next.getText();
         toBeResolvedLater.trigger = sensors.get(ctx.trigger.getText());
         toBeResolvedLater.value   = SIGNAL.valueOf(ctx.value.getText());
-        signal_transition_bindings.put(currentState.getName(), toBeResolvedLater);
+        signal_transition_bindings.put(toBeResolvedLater, currentState.getName());
     }
 
 
@@ -142,7 +142,7 @@ public class ModelBuilder extends ArduinomlBaseListener {
         TimeBinding toBeResolvedLater = new TimeBinding();
         toBeResolvedLater.to      = ctx.next.getText();
         toBeResolvedLater.time = Integer.parseInt(ctx.time.getText());
-        time_transition_bindings.put(currentState.getName(), toBeResolvedLater);
+        time_transition_bindings.put(toBeResolvedLater, currentState.getName());
     }
 
     @Override
