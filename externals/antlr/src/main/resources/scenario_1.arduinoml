@@ -9,7 +9,7 @@ on {
  buzzer <= HIGH
  button is HIGH => off
 }
-off {
+-> off {
  led <= LOW
  buzzer <= LOW
  button is HIGH => on
