@@ -15,7 +15,7 @@ bricks          :   (sensor|actuator)+;
     brick    :   id=IDENTIFIER ':' port=PORT_NUMBER;
 
 states          :   state+;
-    state       :   initial? name=IDENTIFIER '{'  action* (signal_transition|time_transition)* '}';
+    state       :   initial? name=IDENTIFIER '{'  action+ (signal_transition|time_transition)* '}';
     action      :   receiver=IDENTIFIER '<=' value=SIGNAL;
     signal_transition  :   trigger=IDENTIFIER 'is' value=SIGNAL '=>' next=IDENTIFIER ;
     time_transition  :   'after' time=TIME 'ms =>' next=IDENTIFIER ;
@@ -27,7 +27,7 @@ states          :   state+;
 
 PORT_NUMBER     :   [1-9] | '10' |'11' | '12';
 TIME            :   INTEGER;
-IDENTIFIER      :   LOWERCASE (LOWERCASE|UPPERCASE)+;
+IDENTIFIER      :   LOWERCASE (LOWERCASE|UPPERCASE)+ INTEGER?;
 SIGNAL          :   'HIGH' | 'LOW';
 
 /*************

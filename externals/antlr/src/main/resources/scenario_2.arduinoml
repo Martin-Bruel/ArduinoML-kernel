@@ -1,18 +1,26 @@
 application dualAlarm
 
-# Declaring bricks
 sensor buttonA : 9
 sensor buttonB : 10
 actuator buzzer : 11
 
-# Declaring states
 on {
   buzzer <= HIGH
-  buttonA is LOW => off
+  buttonA is LOW => bb
+   buttonB is LOW  => ba
+}
+ba {
+  buzzer <= LOW
+  buttonA is HIGH => off
+   buttonB is LOW  => on
+}
+bb {
+  buzzer <= LOW
+  buttonA is HIGH => on
    buttonB is LOW  => off
 }
 -> off {
   buzzer <= LOW
-  buttonA is HIGH => on
-  buttonB is HIGH => on
+  buttonA is HIGH => ba
+  buttonB is HIGH => bb
 }
