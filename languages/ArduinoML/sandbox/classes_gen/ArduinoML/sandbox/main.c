@@ -1,36 +1,41 @@
 #include <avr/io.h>
-#include <util/delay.h
+#include <util/delay.h>
 #include <Arduino.h>
 
-/** Generating code for application program**/
+/** Generating code for application Scenario3**/
 long debounce = 200;
 boolean B1BounceGuard = false;
 long B1LastDebounceTime = 0;
 
 // Declaring states 
-// TODO};
-STATE currentState = on
-// Declaring variables 
-int B1 = 11;
-int LED1 = 12;
+enum STATE {on,off};
+STATE currentState = off;
+
 // Setup 
 void setup()
 {
-    pinMode(B1, INPUT);  
-    pinMode(LED1, OUTPUT);
+  pinMode(9, INPUT); 	// B1	[Sensor] 
+  pinMode(12, OUTPUT);	// LED1	[Actuator]  
 }
 
-int loop(void)
+void loop(void)
 {
-switch(currentState) {
-;
-case on:
-digitalWrite(12, HIGH);
-B1BounceGuard = millis() - B1LastDebounceTime > debounce;
-//TODObreak;
-case off:
-digitalWrite(12, LOW);
-B1BounceGuard = millis() - B1LastDebounceTime > debounce;
-//TODObreak;
-}
+  switch(currentState) {
+    case on:
+      digitalWrite(12, HIGH);
+      B1BounceGuard = millis() - B1LastDebounceTime > debounce;
+      if (digitalRead(9) == HIGH && B1BounceGuard) {
+        B1LastDebounceTime = millis();
+        currentState = off;
+      }
+    break;
+    case off:
+      digitalWrite(12, LOW);
+      B1BounceGuard = millis() - B1LastDebounceTime > debounce;
+      if (digitalRead(9) == HIGH && B1BounceGuard) {
+        B1LastDebounceTime = millis();
+        currentState = on;
+      }
+    break;
+  }
 }
