@@ -1,0 +1,26 @@
+application multiAlarm
+
+# Declaring bricks
+sensor button: 9
+actuator buzzer: 11
+actuator led: 12
+
+# Declaring states
+
+start {
+    buzzer <= HIGH
+    led <= LOW
+    button is HIGH => end
+}
+
+end {
+    buzzer <= LOW
+    led <= HIGH
+    button is HIGH => reset
+}
+
+-> reset {
+    buzzer <= LOW
+    led <= LOW
+    button is HIGH => start
+}
